@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Grade1Module from './components/grade1/Grade1Module';
-import Grade2Module from './components/grade2/Grade2Module';
-import Grade3Module from './components/grade3/Grade3Module';
+import Grade1Module from "./components/grade1/Grade1Module.jsx";
+import Grade2Module from "./components/grade2/Grade2Module.jsx";
+import Grade3Module from "./components/grade3/Grade3Module.jsx";
 import './App.css';
 
 function App() {
