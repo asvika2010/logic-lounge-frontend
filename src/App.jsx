@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Grade1Module from './components/grade1/Grade1Module';
 import Grade2Module from './components/grade2/Grade2Module';
+import Grade3Module from './components/grade3/Grade3Module';
 import './App.css';
 
 function App() {
@@ -16,7 +17,7 @@ function App() {
         {!selectedGrade ? (
           <div>
             <h2>Choose Your Grade Level</h2>
-            <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '20px' }}>
+            <div style={{ display: 'flex', justifyContent: 'center', gap: '15px', marginTop: '20px', flexWrap: 'wrap' }}>
               <button 
                 onClick={() => setSelectedGrade(1)}
                 style={{ padding: '15px 30px', fontSize: '18px', cursor: 'pointer', background: '#4f46e5', color: '#fff', border: 'none', borderRadius: '8px' }}
@@ -28,6 +29,12 @@ function App() {
                 style={{ padding: '15px 30px', fontSize: '18px', cursor: 'pointer', background: '#059669', color: '#fff', border: 'none', borderRadius: '8px' }}
               >
                 Grade 2
+              </button>
+              <button 
+                onClick={() => setSelectedGrade(3)}
+                style={{ padding: '15px 30px', fontSize: '18px', cursor: 'pointer', background: '#d97706', color: '#fff', border: 'none', borderRadius: '8px' }}
+              >
+                Grade 3
               </button>
             </div>
           </div>
@@ -41,6 +48,7 @@ function App() {
             </button>
             {selectedGrade === 1 && <Grade1Module />}
             {selectedGrade === 2 && <Grade2Module />}
+            {selectedGrade === 3 && <Grade3Module />}
           </div>
         )}
       </main>
